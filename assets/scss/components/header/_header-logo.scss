@@ -6,12 +6,13 @@
     letter-spacing: 0.23em;
     line-height: 20px;
     &__link {
-
+        display: block;
+        padding: 20px 20px 20px 0;
     }
     &__accent {
         display: inline-block;
-        padding: 15px 5px;
-        margin-right: 5px;
+        padding: 14px 1px 13px 5px;
+        margin-right: 4px;
         border:3px solid $color-highlight;
     }
 }
