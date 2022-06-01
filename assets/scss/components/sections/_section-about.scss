@@ -18,6 +18,9 @@
     }
 }
 .about-content {
+    @include md-min{
+        font-size:1.125rem;
+    }
     &__title {
         margin-top: 0;
     }
