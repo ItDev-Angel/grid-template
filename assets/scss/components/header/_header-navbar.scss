@@ -2,12 +2,10 @@
 @use "../../mixins" as *;
 
 .header-navbar {
+    display: grid;
+    align-items: center;
     letter-spacing: 0.1em;
-
-    &__btn {
-        display: none;
-    }
-
+    justify-items: end;
     &__list {
         @include md-min {
             display: grid;
@@ -15,9 +13,7 @@
             width: 100%;
             gap: $gap;
             grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-            @include unlist(0 (-$gap-sm) 0 0);
         }
-
         @include md {
             position: absolute;
             top: 100%;
@@ -27,6 +23,10 @@
             background-color: rgba($color-gray-dark, 0.9);
             @include box-shadow;
             @include unlist;
+        }
+        @include unlist(0 (-$gap-sm) 0 0);
+        &--active{
+            display: block!important;
         }
     }
 
@@ -38,9 +38,18 @@
 
     &__link {
         display: block;
-        padding: $gap $gap-sm;
+
         transition: color 0.5s;
+
         font-size: 1.125rem;
+
+        @include md-min {
+            padding: $gap $gap-sm;
+        }
+
+        @include md {
+            padding: $gap-sm $gap;
+        }
 
         &:hover,
         &:focus {
@@ -50,11 +59,9 @@
 
     &__btn {
         position: relative;
-
         width: 30px;
         height: 23px;
         margin: $gap 0;
-
         cursor: pointer;
         transition: 0.5s ease-in-out;
         transform: rotate(0deg);
@@ -69,7 +76,7 @@
 
             display: block;
 
-            width: 100%;
+            width: 50%;
             height: 3px;
 
             transition: 0.25s ease-in-out;
@@ -79,37 +86,72 @@
             border-radius: 3px;
             background: $color-light;
 
-            &:nth-of-type(1) {
-                top: 0;
+            &:nth-child(even) {
+                left: 50%;
+                border-radius: 0 3px 3px 0;
+            }
+            &:nth-child(odd) {
+                left: 0px;
+                border-radius: 3px 0 0 3px;
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                top: 0px;
             }
 
-            &:nth-of-type(2) {
+            &:nth-child(3),
+            &:nth-child(4) {
                 top: 9px;
             }
 
-            &:nth-of-type(3) {
+            &:nth-child(5),
+            &:nth-child(6) {
                 top: 18px;
             }
         }
 
         &--active span {
-            &:nth-of-type(1) {
-                top: 9px;
-
-                transform: rotate(135deg);
+            &:nth-child(1),
+            &:nth-child(6) {
+                transform: rotate(45deg);
             }
-
-            &:nth-of-type(2) {
-                left: -30px;
-
+            &:nth-child(2),
+            &:nth-child(5) {
+                transform: rotate(-45deg);
+            }
+            &:nth-child(1) {
+                left: 2.5px;
+                top: 3.5px;
+            }
+            
+            &:nth-child(2) {
+                left: calc(50% - 2.5px);
+                top: 3.5px;
+            }
+            
+            &:nth-child(3) {
+                left: -50%;
                 opacity: 0;
             }
-
-            &:nth-of-type(3) {
-                top: 9px;
-
-                transform: rotate(-135deg);
+            &:nth-child(4) {
+                left: 100%;
+                opacity: 0;
             }
+            
+            &:nth-child(5) {
+                left: 2.5px;
+                top: 14.5px;
+            }
+            
+            &:nth-child(6) {
+                left: calc(50% - 2.5px);
+                top: 14.5px;
+            }  
         }
     }
 }
+
+
+
+
+

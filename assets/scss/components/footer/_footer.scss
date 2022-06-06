@@ -8,7 +8,6 @@
     &__container {
         @extend %container;
     }
-    }
     &__social {
         position: relative;
         display: grid;
@@ -50,4 +49,5 @@
     font-weight: 400;
     font-family: "Font Awesome 5 Brands";
     font-size: 2.25rem;
+}
 }

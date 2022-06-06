@@ -2,6 +2,10 @@
 @use "../../mixins" as *;
 
 .posts {
+    h2 {
+        margin-top: 0;
+    }
+
     @include lg-min {
         padding-top: $gap-x5;
         padding-bottom: $gap-x5;
@@ -25,6 +29,7 @@
         display: grid;
         padding-bottom: $gap;
         gap: $gap;
+
         @include lg-min {
             grid-template-areas: "p1 p1 p2 p3""p4 p5 p6 p6";
             grid-template-columns: repeat(4, 1fr);
@@ -77,9 +82,7 @@
     &__link {
         display: grid;
         overflow: hidden;
-
         height: 100%;
-
         grid-template-rows: 300px 1fr;
     }
 
@@ -88,7 +91,6 @@
         overflow: hidden;
         align-content: center;
         justify-content: center;
-
         background-color: $color-primary;
 
         img {
