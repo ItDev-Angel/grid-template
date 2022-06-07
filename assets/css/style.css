@@ -636,15 +636,14 @@ a {
   overflow: hidden;
 }
 .skill-item__title {
+  z-index: 1;
   margin: 0;
+  letter-spacing: 0.1em;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
-  font-size: 1.125rem;
-  letter-spacing: 0.1em;
 }
 .skill-item__image {
   background-position: 50% 50%;
@@ -685,6 +684,7 @@ a {
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
+  font-family: "Roboto", sans-serif;
 }
 .skill-item:hover .skill-item__link {
   color: #d66926;
@@ -772,6 +772,9 @@ a {
   height: 200px;
   content: "";
   background-color: rgba(99, 117, 136, 0.1);
+}
+.about-content p:first-of-type::after p:last-of-type {
+  margin: 0;
 }
 
 .about-img {
@@ -998,7 +1001,6 @@ a {
 }
 .footer .fa, .footer .fab, .footer .fad, .footer .fal, .footer .far, .footer .fas {
   display: inline-block;
-  line-height: 1.5;
   font-weight: 400;
   font-family: "Font Awesome 5 Brands";
   font-size: 2.25rem;
@@ -1041,6 +1043,9 @@ a {
   }
   .header-navbar__btn {
     display: none;
+  }
+  .skill-item__title {
+    font-size: 1.25rem;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1162,6 +1167,9 @@ a {
   }
   .header-content__title {
     margin: 0 0 33px;
+  }
+  .skill-item__title {
+    font-size: 1.125rem;
   }
   .about {
     padding-top: 60px;

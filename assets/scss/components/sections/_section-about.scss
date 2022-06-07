@@ -60,8 +60,8 @@
 .about-content {
     p {
         @include lg-min {
-            font-size: 1.125rem;
-        }
+        font-size: 1.125rem;
+    }
     }
     p:first-of-type{
         position: relative;
@@ -74,6 +74,7 @@
     height: 200px;
     content: "";
     background-color: rgba($color-gray, 0.1);
+    p:last-of-type {margin: 0;}
     @include lg-min {
         right: -$gap * 2.5;
     }
