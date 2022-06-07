@@ -15,20 +15,19 @@
     
         @include abs-position;
         @include md-min {
-          font-size: 1.25rem;
+            font-size: 1.25rem;
         }
         @include md {
-          font-size: 1.125rem;
+            font-size: 1.125rem;
         }
-      }
+    }
     
     &__image {
         background-position: 50% 50%;
         @include abs-position;
         background-size: cover;
         transition: transform 0.5s;
-       
-}
+    }
     &__overlay {
         background-color:$color-primary;
         opacity: 0.8;
