@@ -63,6 +63,9 @@
         font-size: 1.125rem;
     }
     }
+    p:last-of-type { 
+        margin: 0;
+    }
     p:first-of-type{
         position: relative;
         margin-top: -5px;
@@ -74,7 +77,6 @@
     height: 200px;
     content: "";
     background-color: rgba($color-gray, 0.1);
-    p:last-of-type {margin: 0;}
     @include lg-min {
         right: -$gap * 2.5;
     }

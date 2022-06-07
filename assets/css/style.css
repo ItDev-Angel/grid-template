@@ -761,6 +761,9 @@ a {
   max-width: 100%;
   max-height: 480px;
 }
+.about-content p:last-of-type {
+  margin: 0;
+}
 .about-content p:first-of-type {
   position: relative;
   margin-top: -5px;
@@ -772,9 +775,6 @@ a {
   height: 200px;
   content: "";
   background-color: rgba(99, 117, 136, 0.1);
-}
-.about-content p:first-of-type::after p:last-of-type {
-  margin: 0;
 }
 
 .about-img {
